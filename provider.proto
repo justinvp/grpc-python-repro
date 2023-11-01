@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service ResourceProvider {
+    rpc DiffConfig(DiffRequest) returns (DiffResponse) {}
+}
+
+message DiffRequest {
+    string id = 1;
+}
+
+message DiffResponse {
+    repeated string diffs = 1;
+}
